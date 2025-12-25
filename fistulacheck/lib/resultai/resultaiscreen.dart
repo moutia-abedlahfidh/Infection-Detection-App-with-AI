@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class AiResultPage extends StatelessWidget {
-  const AiResultPage({super.key, required String aiAnswer});
+  final String aiAnswer;
+  const AiResultPage({super.key, required this.aiAnswer});
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(create: (_) => Resultcontroller(),
+    return ChangeNotifierProvider(create: (_) => Resultcontroller(aiAnswer),
     child: Consumer<Resultcontroller>(builder: (context, controller, child) {
       return Scaffold(
       appBar: AppBar(
