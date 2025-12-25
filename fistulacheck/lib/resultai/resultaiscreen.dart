@@ -1,44 +1,15 @@
-import 'dart:async';
+import 'package:fistulacheck/resultai/resultaicontroller.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class AiResultPage extends StatefulWidget {
-  final String aiAnswer;
-
-  const AiResultPage({
-    Key? key,
-    required this.aiAnswer,
-  }) : super(key: key);
-
-  @override
-  State<AiResultPage> createState() => _AiResultPageState();
-}
-
-class _AiResultPageState extends State<AiResultPage> {
-  String displayedText = "";
-  int charIndex = 0;
-
-  @override
-  void initState() {
-    super.initState();
-    _startTyping();
-  }
-
-  void _startTyping() {
-    Timer.periodic(const Duration(milliseconds: 40), (timer) {
-      if (charIndex < widget.aiAnswer.length) {
-        setState(() {
-          displayedText += widget.aiAnswer[charIndex];
-          charIndex++;
-        });
-      } else {
-        timer.cancel();
-      }
-    });
-  }
+class AiResultPage extends StatelessWidget {
+  const AiResultPage({super.key, required String aiAnswer});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return ChangeNotifierProvider(create: (_) => Resultcontroller(),
+    child: Consumer<Resultcontroller>(builder: (context, controller, child) {
+      return Scaffold(
       appBar: AppBar(
         title: const Text("AI Discussion"),
         centerTitle: true,
@@ -68,7 +39,7 @@ class _AiResultPageState extends State<AiResultPage> {
                   ),
                 ),
                 child: Text(
-                  displayedText,
+                  controller.displayedText,
                   style: TextStyle(
                     color: Colors.green.shade900,
                     fontSize: 16,
@@ -87,5 +58,6 @@ class _AiResultPageState extends State<AiResultPage> {
         ),
       ),
     );
+    },),);
   }
 }

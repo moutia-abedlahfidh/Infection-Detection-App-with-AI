@@ -1,27 +1,16 @@
-import 'dart:io';
-import 'package:fistulacheck/quiz/quizscreen.dart';
 import 'package:fistulacheck/settings/settingscreen.dart';
+import 'package:fistulacheck/upload/uploadcontroller.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
 class UploadImagePage extends StatelessWidget {
-  final ImagePicker _picker = ImagePicker();
-
-  Future<void> _pickImage(BuildContext context) async {
-    final image = await _picker.pickImage(source: ImageSource.gallery);
-    if (image == null) return;
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => QuestionnairePage(image: File(image.path)),
-      ),
-    );
-  }
+  
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return ChangeNotifierProvider(create: (_)=> Uploadcontroller(),
+    child: Consumer<Uploadcontroller>(builder: (context, controller, child) {
+      return Scaffold(
       appBar: AppBar(
         title: const Text("Accueil"),
         centerTitle: true,
@@ -68,7 +57,7 @@ class UploadImagePage extends StatelessWidget {
                   vertical: 14,
                 ),
               ),
-              onPressed: () => _pickImage(context),
+              onPressed: () => controller.pickImage(context),
             ),
 
             const SizedBox(height: 20),
@@ -100,5 +89,5 @@ class UploadImagePage extends StatelessWidget {
         ),
       )
     );
-  }
+    },),);}
 }
