@@ -1,4 +1,4 @@
-import 'package:fistulacheck/resultai/resultaicontroller.dart';
+import 'package:FistulaCheck/resultai/resultaicontroller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

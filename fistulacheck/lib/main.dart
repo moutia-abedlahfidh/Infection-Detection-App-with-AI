@@ -1,5 +1,5 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:fistulacheck/upload/uploadscreen.dart';
+import 'package:FistulaCheck/body.dart';
 import 'package:flutter/material.dart';
 
 void main() async{
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: UploadImagePage(),
+      home: const Body(),
     );
   }
 }

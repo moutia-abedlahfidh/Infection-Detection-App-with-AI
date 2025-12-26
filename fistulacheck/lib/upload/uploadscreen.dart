@@ -1,5 +1,5 @@
-import 'package:fistulacheck/settings/settingscreen.dart';
-import 'package:fistulacheck/upload/uploadcontroller.dart';
+import 'package:FistulaCheck/settings/settingscreen.dart';
+import 'package:FistulaCheck/upload/uploadcontroller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

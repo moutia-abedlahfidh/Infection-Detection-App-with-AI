@@ -1,7 +1,7 @@
 
 import 'dart:io';
 
-import 'package:fistulacheck/quiz/quizcontroller.dart';
+import 'package:FistulaCheck/quiz/quizcontroller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

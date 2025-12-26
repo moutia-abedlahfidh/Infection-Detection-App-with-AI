@@ -1,4 +1,4 @@
-import 'package:fistulacheck/login/login_controller.dart';
+import 'package:FistulaCheck/login/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -29,25 +29,15 @@ class LoginScreen extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(Icons.favorite, color: Colors.green, size: 60),
-                  const SizedBox(height: 10),
-                  const Text(
-                    "Gesundheit",
-                    style: TextStyle(
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 26,
-                    ),
-                  ),
 
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 20),
 
                   const Text(
-                    "Willkommen Wieder",
+                    "Bienvenue à nouveau",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black87,
@@ -59,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: 40),
 
                   Image.asset(
-                    "assests/login_logo.png", 
+                    "assets/login.png", 
                     width: 200,
                     height: 120,
                   ),
@@ -72,7 +62,7 @@ class LoginScreen extends StatelessWidget {
                     decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'Email eingeben',
+                      hintText: "Entrez e-mail",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
@@ -87,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                     decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'Passwort eingeben',
+                      hintText: 'Entrez le mot de passe',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
@@ -116,7 +106,7 @@ class LoginScreen extends StatelessWidget {
                       elevation: 5,
                     ),
                     child: const Text(
-                      "Einloggen",
+                      "Se connecter",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -128,7 +118,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: 20),
 
                   const Text(
-                    "Bleiben Sie gesund und motiviert!",
+                    "Restez en bonne santé et motivés !",
                     style: TextStyle(
                       color: Colors.black54,
                       fontStyle: FontStyle.italic,

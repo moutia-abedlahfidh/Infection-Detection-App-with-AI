@@ -34,24 +34,19 @@ class SignupScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Icon(Icons.favorite, color: Colors.green, size: 60),
-                  const SizedBox(height: 10),
-                  const Text(
-                    "Gesundheit",
-                    style: TextStyle(
-                      color: Colors.green,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 26,
-                    ),
-                  ),
                   const SizedBox(height: 40),
                   const Text(
-                    "Registrieren",
+                    "Registre",
                     style: TextStyle(
                       color: Colors.black87,
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
+                  ),
+                  Image.asset(
+                    "assets/registre.png", 
+                    width: 200,
+                    height: 120,
                   ),
                   const SizedBox(height: 30),
 
@@ -61,7 +56,7 @@ class SignupScreen extends StatelessWidget {
                     decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'Name',
+                      hintText: 'nom',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
@@ -76,7 +71,7 @@ class SignupScreen extends StatelessWidget {
                     decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'Email',
+                      hintText: 'email',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
@@ -91,7 +86,7 @@ class SignupScreen extends StatelessWidget {
                     decoration: const  InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'Password',
+                      hintText: 'Mot de passe',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
@@ -106,7 +101,7 @@ class SignupScreen extends StatelessWidget {
                     decoration: const InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      hintText: 'Wiederholen Sie Ihr Password',
+                      hintText: 'Répétez votre mot de passe',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(15)),
                       ),
@@ -134,7 +129,7 @@ class SignupScreen extends StatelessWidget {
                       elevation: 5,
                     ),
                     child: const Text(
-                      "Registrieren",
+                      "Registre",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -147,7 +142,7 @@ class SignupScreen extends StatelessWidget {
                   Column(
                     children:  [
                        const Text(
-                    "Haben Sie schon einen Konto",
+                    "Avez-vous déjà un compte ?",
                     style: TextStyle(
                       color: Colors.black54,
                       fontStyle: FontStyle.italic,
@@ -158,7 +153,7 @@ class SignupScreen extends StatelessWidget {
                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => const LoginScreen()));
                     },
                     child: const Text(
-                    "Login Sie ein",
+                    "Se connecter",
                     style: TextStyle(
                       color: Colors.black54,
                       fontWeight: FontWeight.bold,

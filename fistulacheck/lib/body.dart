@@ -1,5 +1,5 @@
-import 'package:fistulacheck/login/login_screen.dart';
-import 'package:fistulacheck/signup/signup_screen.dart';
+import 'package:FistulaCheck/login/login_screen.dart';
+import 'package:FistulaCheck/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -36,13 +36,13 @@ class Body extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Image.asset(
-                        "assests/gesundheit.png",
+                        "assets/checkLogo.png",
                         width: MediaQuery.of(context).size.width * 0.7,
                         height: MediaQuery.of(context).size.height * 0.25,
                       ),
                       const SizedBox(height: 20),
                       const Text(
-                        "Wir kümmern uns\num deine Gesundheit",
+                        "Nous prenons soin de votre santé",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 22,
@@ -53,7 +53,7 @@ class Body extends StatelessWidget {
                       ),
                       const SizedBox(height: 10),
                       const Text(
-                        "Dein täglicher Begleiter für Wohlbefinden & Balance",
+                        "Votre compagnon quotidien pour le bien-être et l'équilibre",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 14,
@@ -95,7 +95,7 @@ class Body extends StatelessWidget {
                           ),
                           child: const Center(
                             child: Text(
-                              "Einloggen",
+                              "Se connecter",
                               style: TextStyle(
                                 fontSize: 18,
                                 color: Colors.white,
@@ -132,7 +132,7 @@ class Body extends StatelessWidget {
                           ),
                           child: const Center(
                             child: Text(
-                              "Konto Erstellen",
+                              "Créer un compte",
                               style: TextStyle(
                                 fontSize: 18,
                                 color: Colors.green,
@@ -145,14 +145,6 @@ class Body extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Text(
-                  "Bleib aktiv, bleib gesund 🌿",
-                  style: TextStyle(
-                    color: Colors.black54,
-                    fontStyle: FontStyle.italic,
-                  ),
-                ),
-                const SizedBox(height: 30),
               ],
             ),
           ),

@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:fistulacheck/quiz/quizscreen.dart';
+import 'package:FistulaCheck/quiz/quizscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 

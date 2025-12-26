@@ -1,8 +1,8 @@
 
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fistulacheck/login/login_service.dart';
-import 'package:fistulacheck/upload/uploadscreen.dart';
+import 'package:FistulaCheck/login/login_service.dart';
+import 'package:FistulaCheck/upload/uploadscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

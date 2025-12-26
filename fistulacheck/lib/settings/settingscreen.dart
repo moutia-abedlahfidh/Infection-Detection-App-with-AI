@@ -1,4 +1,4 @@
-import 'package:fistulacheck/main.dart';
+import 'package:FistulaCheck/main.dart';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
